@@ -12,7 +12,7 @@ const Button = styled.button`
   color: black;
   font-size: 20px;
   margin-left: 16%;
-  background-color: #fb6467ff;
+  background-color: #2eafc5;
 `;
 const Img2 = styled.img`
   width: 20%;
@@ -23,8 +23,6 @@ export default function WelcomePage() {
   return (
     <Div className="welcome-page">
       <header>
-        <h1>Welcome to the ultimate fan site!</h1>
-
         <img
           className="main-img"
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"

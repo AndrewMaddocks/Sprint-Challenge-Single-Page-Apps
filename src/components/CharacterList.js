@@ -7,10 +7,11 @@ import styled from "styled-components";
 
 const Button = styled.button`
   font-size: 20px;
-  background-color: #fb6467ff;
+  background-color: #2eafc5;
+  width: 11%;
 `;
 const Title = styled.h1`
-  color: #fafd7cff;
+  color: #2eafc5;
   font-size: 30px;
 `;
 
@@ -48,10 +49,11 @@ export default function CharacterList() {
       </Button>
 
       <SearchForm search={search} characters={characters} />
-
-      {searchData.map(char => (
-        <CharacterCard key={char.id} item={char} />
-      ))}
+      <div>
+        {searchData.map(char => (
+          <CharacterCard key={char.id} item={char} />
+        ))}
+      </div>
     </section>
   );
 }

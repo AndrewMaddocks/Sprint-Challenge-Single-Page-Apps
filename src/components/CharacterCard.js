@@ -6,6 +6,9 @@ const Div1 = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: #b7e4f9ff;
+  background-color: #4d9041;
+  width: 20%;
+  margin-bottom: 2%;
 `;
 const H1 = styled.h1`
   color: #e762d7ff;
