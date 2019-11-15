@@ -25,6 +25,12 @@ export default function SearchForm(props) {
           type="text"
           name="character"
           id="character"
+        ></input>
+        <input
+          onChange={handleChanges}
+          type="submit"
+          name="search"
+          id="search"
           placeholder="Search"
         ></input>
       </form>

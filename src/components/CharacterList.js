@@ -3,14 +3,24 @@ import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Button = styled.button`
+  font-size: 20px;
+  background-color: #fb6467ff;
+`;
+const Title = styled.h1`
+  color: #fafd7cff;
+  font-size: 30px;
+`;
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
-  const [filteredData, updateData] = useState([]);
+  const [searchData, updateData] = useState([]);
 
-  const search = charArr => {
-    updateData(charArr);
+  const search = char => {
+    updateData(char);
   };
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -30,10 +40,16 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <Link to="/">Home</Link>
+      <Title>Character List!</Title>
+      <Button>
+        <Link className="links" to="/">
+          Home
+        </Link>
+      </Button>
+
       <SearchForm search={search} characters={characters} />
-      <h2>Character List!</h2>
-      {filteredData.map(char => (
+
+      {searchData.map(char => (
         <CharacterCard key={char.id} item={char} />
       ))}
     </section>
